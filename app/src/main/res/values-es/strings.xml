@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Practico 1</string>
+    <string name="title_activity_maps">Mapa</string>
+    <string name="btn_Accept">Aceptar</string>
+    <string name="btn_Cancel">Cancelar</string>
+    <string name="txt_Operation">"La operación a resolver es: "</string>
+    <string name="txt_UserScore">"Tus puntos son: "</string>
+    <string name="cb_Article0">Lapicero icesi (20 puntos)</string>
+    <string name="cb_Article1">Cuaderno (30 puntos)</string>
+    <string name="cb_Article2">Libreta Icesi (40 puntos)</string>
+    <string name="cb_Article3">Camisa Icesi (80 puntos)</string>
+    <string name="cb_Article4">Saco Icesi (100 points)</string>
+</resources>

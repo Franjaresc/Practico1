@@ -1,10 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Practico 1</string>
     <string name="title_activity_maps">Map</string>
     <string name="btn_Accept">Accept</string>
     <string name="btn_Cancel">Cancel</string>
     <string name="txt_Operation">"The operation to solve is: "</string>
-    <string name="txt_UserScore">"Your points are: "</string>
+    <string name="txt_UserScore">"Your point are: "</string>
     <string name="cb_Article0">Icesi\'s pen (20 points)</string>
     <string name="cb_Article1">NoteBook (30 points)</string>
     <string name="cb_Article2">Icesi\'s Notebook (40 points)</string>
