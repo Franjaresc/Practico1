@@ -48,11 +48,11 @@ public class Questions {
         Random random = new Random();
         if (level==0){
 
-            numberOne = Math.round((random.nextDouble()*51)*100)/100d;
-            numberTwo = Math.round((random.nextDouble()*51)*100)/100d;
+            numberOne = Math.round((random.nextDouble()*50)*100)/100d;
+            numberTwo = Math.round((random.nextDouble()*50)*100)/100d;
             int operacion = random.nextInt(4);
             if (operacion==3&&numberTwo==0){
-                numberTwo = 1 + Math.round((random.nextDouble() * (51.0 - 1.0))*100)/100d;
+                numberTwo = 1 + Math.round((random.nextDouble() * (50.0 - 1.0))*100)/100d;
             }
         }
         else{
@@ -70,19 +70,19 @@ public class Questions {
         txt_Operation += numberOne+" ";
         switch (operation){
             case 0:
-                answer = numberOne+numberTwo;
+                answer = Math.round((numberOne+numberTwo)*100)/100d;
                 txt_Operation+= "+ "+numberTwo;
                 break;
             case 1:
-                answer = numberOne-numberTwo;
+                answer = Math.round((numberOne-numberTwo)*100)/100d;
                 txt_Operation+= "- "+numberTwo;
                 break;
             case 2:
-                answer = numberOne*numberTwo;
+                answer = Math.round((numberOne*numberTwo)*100)/100d;
                 txt_Operation+= "* "+numberTwo;
                 break;
             case 3:
-                answer = numberOne/numberTwo;
+                answer = Math.round((numberOne/numberTwo)*100)/100d;
                 txt_Operation+= "/ "+numberTwo;
                 break;
         }
@@ -95,9 +95,9 @@ public class Questions {
         ArrayList<Double> answers = new ArrayList<>();
         answers.add(answer);
         for (int a=1;a<5;a++){
-            double randomAnswer = Math.round(((random.nextDouble() * answer) + answer)*100)/100;
+            double randomAnswer = Math.round(((random.nextDouble() * answer) + (answer-10.0))*100)/100d;
             while (randomAnswer == answer) {
-                randomAnswer = Math.round(((random.nextDouble() * answer) + answer)*100)/100;
+                randomAnswer = Math.round(((random.nextDouble() * answer) + (answer-10.0))*100)/100d;
             }
             answers.add(randomAnswer);
         }

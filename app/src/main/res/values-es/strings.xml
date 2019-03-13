@@ -11,4 +11,8 @@
     <string name="cb_Article2">Libreta Icesi (40 puntos)</string>
     <string name="cb_Article3">Camisa Icesi (80 puntos)</string>
     <string name="cb_Article4">Saco Icesi (100 points)</string>
+    <string name="correct">Correcto!</string>
+    <string name="wrong">" ¡Incorrecto!"</string>
+    <string name="purchase">¡Se realizó la compra con éxito!</string>
+    <string name="notPurchase">¡La compra no se pudo realizar por falta de puntos!</string>
 </resources>

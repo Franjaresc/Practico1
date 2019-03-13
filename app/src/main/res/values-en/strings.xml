@@ -11,4 +11,8 @@
     <string name="cb_Article2">Icesi\'s Notebook (40 points)</string>
     <string name="cb_Article3">Icesi\'s shirt (80 points)</string>
     <string name="cb_Article4">Icesi\'s Jacket (100 points)</string>
+    <string name="correct">Correct!</string>
+    <string name="wrong">Wrong!</string>
+    <string name="purchase">The purchase was made successfully!</string>
+    <string name="notPurchase">The purchase could not be made due to insufficient points!</string>
 </resources>

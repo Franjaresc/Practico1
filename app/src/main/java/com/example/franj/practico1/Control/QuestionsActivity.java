@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.franj.practico1.Model.Questions;
 import com.example.franj.practico1.R;
@@ -41,11 +42,11 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
         spinner=findViewById(R.id.spinner);
         ArrayList<Double> answers = questions.generateAnswers();
         answer = answers.get(0);
-        Collections.sort(answers);
+        Collections.shuffle(answers);
         ArrayAdapter<Double> adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, answers);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
-        txt_Operation.setText(questions.getTxt_Operation());
+        txt_Operation.setText(getString(R.string.txt_Operation) +questions.getTxt_Operation());
 
     }
 
@@ -54,6 +55,7 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
         switch (v.getId()){
             case R.id.btn_Accept:
                 if (answer==Double.parseDouble(spinner.getSelectedItem().toString())){
+                    Toast.makeText(QuestionsActivity.this,getString(R.string.correct), Toast.LENGTH_LONG).show();
                     if (level==0){
                         intent.putExtra("newScore",5);
                     }
@@ -62,6 +64,7 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
                     }
                 }
                 else {
+                    Toast.makeText(QuestionsActivity.this,getString(R.string.wrong), Toast.LENGTH_LONG).show();
                     intent.putExtra("newScore",0);
                 }
                 setResult(RESULT_OK,intent);
