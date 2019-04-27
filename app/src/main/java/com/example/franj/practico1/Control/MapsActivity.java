@@ -78,7 +78,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         public void onLocationChanged(Location location) {
             personalPosition = null;
             personalPosition = new LatLng(location.getLatitude(),location.getLongitude());
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(personalPosition));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(personalPosition,18.0f));
             personalMarker.setPosition(personalPosition);
             /*
             Biblioteca Icesi
@@ -134,8 +134,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         personalPosition = new LatLng(3.341757 ,  -76.530808);
         personalMarker = mMap.addMarker(new MarkerOptions().position(personalPosition).title("YO"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(personalPosition));
-
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(personalPosition,18.0f));
 
     }
 
@@ -173,7 +172,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 switch (resultCode){
                     case RESULT_OK:
 
-                        score += data.getExtras().getInt("newScore");
+                        score -= data.getExtras().getInt("newScore");
                         txt_Score.setText(""+score);
                         break;
                 }
